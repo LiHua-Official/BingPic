@@ -13,10 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: curl https://cn.bing.com`curl cn.bing.com|grep preload|cut -d \" -f 6|cut -d \& -f 1` -o latest.jpg
-      - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Update BingPic"
-          git push master
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.SSH }}
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
