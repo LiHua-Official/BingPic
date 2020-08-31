@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: mkdir public 
-      - run: curl https://cn.bing.com`curl cn.bing.com|grep preload|cut -d \" -f 6|cut -d \& -f 1` -o public/latest.jpg
+      - run: curl https://cn.bing.com`curl cn.bing.com|grep preload|cut -d \" -f 6|cut -d \& -f 1` -o public/latest.jpeg
       - uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.SSH }}
