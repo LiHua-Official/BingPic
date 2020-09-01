@@ -1,1 +1,1 @@
-curl https://cn.bing.com`curl cn.bing.com|grep preload|cut -d \" -f 6|cut -d \& -f 1` -o public/latest.jpeg
+curl -s https://cn.bing.com`curl -s cn.bing.com|grep preload|cut -d \" -f 6|cut -d \& -f 1` -o public/latest.jpeg
