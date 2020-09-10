@@ -1,1 +1,1 @@
-curl -s https://bing.com`curl -s https://bing.com/HPImageArchive.aspx\?format\=js\&idx\=0\&n\=1 | jq -r '.images[0].url'` -o public/latest.jpeg
+curl -s https://bing.com`curl -s https://bing.com/HPImageArchive.aspx\?format\=js\&idx\=0\&n\=1 | jq -r '.images[0].url'` -o latest.jpeg
