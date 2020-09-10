@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: sudo apt-get update
-      - run: curl -s https://bing.com`curl -G -d 'format=js&n=1&mkt=en_US' -s https://bing.com/HPImageArchive.aspx | jq -r '.images[0].url'` -o latest_en_US.jpeg
+      - run: curl -s https://bing.com`curl -G -d 'format=js&n=1&mkt=en_US' -s https://bing.com/HPImageArchive.aspx | jq -r '.images[0].url'` -o latest/en_US.jpeg
       - run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
