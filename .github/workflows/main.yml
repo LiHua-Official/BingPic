@@ -12,10 +12,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: sudo apt-get install jq
-      - run: curl -s https://bing.com`curl -d 'format=js&n=1' -s https://bing.com/HPImageArchive.aspx | jq -r '.images[0].url'` -o latest.jpeg
-      - run: git config --local user.email "action@github.com"
-      - run: git config --local user.name "GitHub Action"
+      - run: sudo apt-get update
+      # - run: sudo apt-get install jq
+      - run: bash main
+      # - run: git config --local user.email "action@github.com"
+      # - run: git config --local user.name "GitHub Action"
       - run: git add .
       - run: git commit -m "Add BingPic"
       - run: git push origin master
