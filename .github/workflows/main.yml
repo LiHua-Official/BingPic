@@ -12,6 +12,7 @@ jobs:
   
     steps:
       - uses: actions/checkout@v2
+      - run: sudo apt-get install jq
       - run: mkdir public 
       - run: bash main
       - uses: peaceiris/actions-gh-pages@v3
