@@ -1,1 +1,0 @@
-curl -s https://bing.com`curl -G -d 'format=js&n=1' -s https://bing.com/HPImageArchive.aspx | jq -r '.images[0].url'` -o latest.jpeg
