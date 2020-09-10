@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 16 * * *'
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: sudo apt-get update
+      # - run: sudo apt-get install jq
+      - run: curl -s https://bing.com`curl -G -d 'format=js&n=1&mkt=en_US' -s https://bing.com/HPImageArchive.aspx | jq -r '.images[0].url'` -o latest_en_US.jpeg
+      - run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Add BingPic"
+          git push origin master
