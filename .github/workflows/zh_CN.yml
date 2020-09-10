@@ -12,8 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: sudo apt-get update
-      # - run: sudo apt-get install jq
-      - run: mkdir latest
       - run: curl -s https://bing.com`curl -G -d 'format=js&n=1&mkt=zh-CN' -s https://bing.com/HPImageArchive.aspx | jq -r '.images[0].url'` -o latest/zh_CN.jpeg
       - run: |
           git config --local user.email "action@github.com"
