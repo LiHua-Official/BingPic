@@ -1,5 +1,5 @@
 # BingPic
-今天的必应图片  
+今日必应美图  
 使用
 ```
 https://cdn.jsdelivr.net/gh/LiHua-Official/BingPic@master/latest/zh_CN.jpeg
